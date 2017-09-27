@@ -1,0 +1,40 @@
+{
+  "name": "Example Threshold",
+  "number_of_inputs": 1,
+  "task": "Segmentation.",
+  "organ": "Other",
+  "modality": "Other",
+  "train_test_data_details": ".",
+  "briefdescription": ".",
+  "detaileddescription": "",
+  "website": "",
+  "citation": "",
+  "version": "0.1",
+  "docker": {
+    "dockerhub_repository": "deepinfer/example",
+    "digest": "sha256:a526131832faad6a0bd73987435c6634ec23b646699d0823784df360ef293b7a",
+    "size": "3.53 GB"
+  },
+  "model_name": "threshold",
+  "data_path": "/data",
+  "members": [
+    {
+      "name": "InputVolume",
+      "type": "volume",
+      "iotype": "input",
+      "voltype": "ScalarVolume",
+      "detaileddescriptionSet": "Axial T2-W Prostate MRI.\n",
+      "default": "std::vector<unsigned int>(3, 64)",
+      "itk_type": "typename FilterType::SizeType"
+    },
+    {
+      "name": "OutputLabel",
+      "type": "volume",
+      "iotype": "output",
+      "voltype": "LabelMap",
+      "detaileddescriptionSet": "Output labelmap for the segmentation results.\n",
+      "default": "std::vector<unsigned int>(3, 64)",
+      "itk_type": "typename FilterType::SizeType"
+    }
+  ]
+}
